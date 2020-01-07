@@ -1,0 +1,11 @@
+== Postgres - JSON 操作
+
+[source, sql]
+----
+-- 2
+SELECT '{"a":1,"b":2}'::json->>'b'
+-- 1
+SELECT json_extract_path_text('{"a":1}', 'a')
+----
+
+https://www.postgresql.org/docs/9.3/functions-json.html[JSON Functions and Operators]
