@@ -1,4 +1,11 @@
-### Git
+
+## Submodule
+
+```
+git submodule add <仓库地址> <本地路径>
+```
+
+## Git
 
 ```shell
 # set git user
