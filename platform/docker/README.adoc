@@ -1,0 +1,98 @@
+== Docker 应用笔记
+
+`Docker` 属于 `Linux容器` 的一种封装，提供简单易用的容器使用接口。它是目前最流行的 Linux 容器解决方案。
+
+> Linux 容器（Linux Containers，缩写为 LXC）。Linux 容器不是模拟一个完整的操作系统，而是对进程进行隔离。或者说，在正常进程的外面套了一个保护层。对于容器里面的进程来说，它接触到的各种资源都是虚拟的，从而实现与底层系统的隔离。
+
+Docker 将应用程序与该程序的依赖，打包在一个文件里面。运行这个文件，就会生成一个虚拟容器。程序在这个虚拟容器里运行，就好像在真实的物理机上运行一样。有了 Docker，就不用担心环境问题。
+
+总体来说，Docker 的接口相当简单，用户可以方便地创建和使用容器，把自己的应用放入容器。容器还可以进行版本管理、复制、分享、修改，就像管理普通的代码一样。
+
+=== Docker 的用途
+
+* 提供一次性的环境——比如，本地测试他人的软件、持续集成的时候提供单元测试和构建的环境；
+* 提供弹性的服务——因为Docker容器可以随开随关，很适合动态扩容和缩容；
+* 组建微服务架构——通过多个容器，一台机器可以跑多个服务，因此在本机就可以模拟出微服务架构。
+
+=== Docker 安装
+
+[source,shell]
+----
+# Debian/Ubuntu 安装
+sudo apt install docker
+# Arch Linux 安装
+sudo pacman -S docker
+# 启动 Docker
+sudo systemctl start docker
+# 设置开机启动
+sudo systemctl enable docker
+----
+
+=== 配置加速镜像
+
+创建或修改 `/etc/docker/daemon.json`：
+
+[source,json]
+----
+{
+    "registry-mirrors": [
+        "https://dockerhub.azk8s.cn",
+        "https://docker.mirrors.ustc.edu.cn",
+        "https://registry.docker-cn.com"
+    ]
+}
+----
+
+然后，重启Docker服务。
+
+[source,shell]
+----
+sudo systemctl daemon-reload
+# 重启Docker
+sudo systemctl restart docker
+----
+
+=== 常用镜像
+
+|===
+|名称 |地址 |备注
+
+|Docker 中国官方镜像
+|https://registry.docker-cn.com
+|
+
+|Azure 中国镜像
+|https://dockerhub.azk8s.cn
+|
+
+|科大镜像站
+|https://docker.mirrors.ustc.edu.cn
+|
+
+|七牛云
+|https://reg-mirror.qiniu.com
+|
+
+|网易云
+|https://hub-mirror.c.163.com
+|
+
+|腾讯云
+|https://mirror.ccs.tencentyun.com
+|
+
+|===
+
+=== 环境清理
+
+[source,shell]
+----
+docker kill $(docker ps -aq)
+docker rm $(docker ps -aq)
+docker rmi $(docker images -q)
+docker volume rm $(docker volume ls -q)
+----
+
+=== 其他
+
+*参考资料 - https://segmentfault.com/a/1190000019115546[Docker Hub 镜像加速器]
