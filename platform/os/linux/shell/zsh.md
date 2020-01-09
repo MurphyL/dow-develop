@@ -1,8 +1,10 @@
-## Zsh
+# Zsh
+
+> 切换`Shell`： chsh -s /bin/zsh
+
+## 安装包管理器 - ‵antigen`
 
 > 使用[`antigen`](https://github.com/zsh-users/antigen)管理插件
-
-### 安装包管理器 - ‵antigen`
 
 ```sh
 git clone https://github.com/zsh-users/antigen.git ~/.antigen/antigen
