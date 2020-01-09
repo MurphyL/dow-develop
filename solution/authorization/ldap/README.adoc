@@ -1,0 +1,33 @@
+== OpenLDAP
+
+[source, shell]
+.openldap-docker-demo.java
+----
+docker run -p 389:389 --name openldap --network bridge --hostname openldap-host --env LDAP_ORGANISATION="murphyl" --env LDAP_DOMAIN="murphyl.com" --env LDAP_ADMIN_PASSWORD="12345" --detach osixia/openldap
+----
+
+==== 环境变量
+
+* --env LDAP_ORGANISATION="murphyl" - 组织名称
+* --env LDAP_DOMAIN="murphyl.com" - 访问域名
+* --env LDAP_ADMIN_PASSWORD="12345" - 管理密码
+
+==== 授权访问
+
+[source, text]
+----
+cn=admin,dc=murphyl,dc=com
+----
+
+* DC (Domain Component)
+* CN (Common Name)
+* OU (Organizational Unit)
+* O (Organization Name)
+
+
+
+=== 其他
+
+* http://www.openldap.org/[OpenLDAP]
+* http://www.bind9.net/ldap-tools[LDAP Software, LDAP Tools, LDAP Utilities]
+* https://wiki.shileizcc.com/confluence/display/openldap/OpenLDAP[OpenLDAP - 中文文档]
