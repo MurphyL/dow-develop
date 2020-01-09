@@ -1,1 +1,0 @@
-../../../utilities/ide/intellij.md
