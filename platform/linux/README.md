@@ -1,4 +1,7 @@
-# 发行版 - Ubuntu
+# 发行版选择
+
+- 硬盘安装：`Ubuntu/Gnome`
+- Windows Wsl：`Debian`
 
 ## 环境搭建
 
