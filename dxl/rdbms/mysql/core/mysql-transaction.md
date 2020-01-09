@@ -1,7 +1,0 @@
-## MySQL事务隔离
-
-### 事务隔离级别设置
-
-```sql
-SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED
-```
