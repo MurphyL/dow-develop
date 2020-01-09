@@ -1,3 +1,33 @@
+# Maven
+
+## 基础配置
+
+```xml
+<properties>
+    <maven.compiler.target>1.8</maven.compiler.target>
+    <maven.compiler.source>1.8</maven.compiler.source>
+</properties>
+```
+
+## 插件
+
+```xml
+<build>
+    <plugins>
+        <!-- Tomcat -->
+        <plugin>
+            <groupId>org.apache.tomcat.maven</groupId>
+            <artifactId>tomcat7-maven-plugin</artifactId>
+            <version>2.2</version>
+            <configuration>
+                <path>/</path>
+                <port>9090</port>
+                <uriEncoding>UTF-8</uriEncoding>
+            </configuration>
+        </plugin>
+    </plugins>
+</build>
+```
 
 ## 国内Maven镜像站点
 
