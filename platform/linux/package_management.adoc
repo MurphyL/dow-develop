@@ -1,0 +1,68 @@
+== 软件包的管理
+
+=== 常见的包管理器
+
+|===
+| | apt/dpkg | yum/dnf | pacman
+
+| 发行版
+| Debian, Ubuntu
+| Fedora, CentOS
+| Arch, Manjaro
+
+| 更新系统
+| apt-get upgrade
+| yum update
+| pacman -Su
+
+| 从仓库安装
+| apt-get install pkg
+| yum install pkg
+| pacman -S pkg
+
+| 从文件安装
+| dpkg -i pkg
+| yum localinstall pkg
+| pacman -U pkg
+
+| 更新已有软件
+| apt-get install pkg
+| yum update pkg
+| pacman -S pkg
+
+| 卸载指定软件
+| apt-get remove pkg
+| yum erase pkg
+| pacman -R pkg
+
+| 更新软件源
+| apt-get update
+| yum check-update
+| pacman -Sy
+
+| 列出已安装的包
+| dpkg -l
+| rpm -qa
+| pacman -Q
+
+| 列出仓库
+| cat /etc/apt/sources.list
+| yum repolist
+| cat /etc/pacman.conf
+
+| 新增仓库
+| edit /etc/apt/sources.list
+| add repo to /etc/yum.repos.d/
+| edit /etc/pacman.conf
+
+| 删除仓库
+| edit /etc/apt/sources.list
+| remove repo from /etc/yum.repos.d/
+| edit /etc/pacman.conf
+
+|===
+
+
+=== 其他
+
+* https://distrowatch.com/dwres.php?resource=package-management[Package Management Cheatsheet]

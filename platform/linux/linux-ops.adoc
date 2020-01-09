@@ -1,0 +1,47 @@
+```
+title: Linux运维
+```
+
+=== 系统
+
+[source,shell]
+----
+# 系统信息
+uname -a
+# Redhat/CentOS 系统信息
+cat /etc/redhat-release
+
+# 开机时间
+uptime
+----
+
+=== CPU
+
+[source,shell]
+----
+vmstat
+----
+
+=== 硬盘
+
+[source,shell]
+----
+# 查看大小、分区、文件系统类型
+df -hT
+
+# 列出磁盘占用量最大的文件或者目录
+du -ahx / | sort -rh | head -20
+
+# 硬盘使用率
+iostat –xm <interval> / iostat -xmdz <interval>
+
+# 挂载磁盘
+mount 192.168.10.32:/root/.jenkins/workspace /mnt/jenkins
+----
+
+=== 内存
+
+[source,shell]
+----
+free -h
+----
