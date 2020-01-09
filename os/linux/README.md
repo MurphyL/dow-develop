@@ -1,11 +1,24 @@
-## 发行版 - Ubuntu
+# 发行版 - Ubuntu
+
+## 环境搭建
+
+- 免密登陆远程机器
+
+```sh
+# 检查SSH keys是否已存在
+ls -al ~/.ssh
+# 生成SSH keys
+ssh-keygen -t rsa -C "example@email.com"
+# 拷贝SSH公钥到远程
+ssh-copy-id remote_user@remote_host
+```
 
 > 切换`Shell`： chsh -s /bin/zsh
 
 - [bash](./bash.md)
 - [zsh](./zsh.md)
 
-### 参考文档
+## 参考文档
 
 https://man.linuxde.net/
 http://billie66.github.io/TLCL/book/

@@ -1,0 +1,41 @@
+
+=== 构建
+build [book] [output]          build a book
+--format     Format to build to (Default is website; Values are website, jso
+n, ebook)
+--log        Minimum log level to display (Default is info; Values are debug
+, info, warn, error, disabled)
+
+=== 生成PDF
+
+pdf [book] [output]    build a book to pdf
+--log        Minimum log level to display (Default is info; Values are debug
+, info, warn, error, disabled)
+
+
+=== 生成epub
+epub [book] [output]   build a book to epub
+--log        Minimum log level to display (Default is info; Values are debug
+, info, warn, error, disabled)
+
+=== 生成mobi
+mobi [book] [output]   build a book to mobi
+--log        Minimum log level to display (Default is info; Values are debug
+, info, warn, error, disabled)
+
+=== 本地浏览器预览
+serve [book]   Build then serve a gitbook from a directory
+--port       Port for server to listen on (Default is 4000)
+--lrport     Port for livereload server to listen on (Default is 35729)
+--watch      Enable/disable file watcher (Default is true)
+--format     Format to build to (Default is website; Values are website, jso
+n, ebook)
+--log        Minimum log level to display (Default is info; Values are debug
+, info, warn, error, disabled)
+
+
+== 参考资料
+
+* https://github.com/GitbookIO/gitbook/blob/master/docs/setup.md[Setup and Installation of GitBook]
+* https://chrisniael.gitbooks.io/gitbook-documentation/content/format/asciidoc.html[AsciiDoc - Gitbook中文文档]
+* http://asciidoctor.org/docs/asciidoc-syntax-quick-reference/[AsciiDoc Syntax Quick Reference]
