@@ -1,0 +1,18 @@
+== Zeppelin
+
+Apache Zeppelin 是一个让交互式数据分析变得可行的基于网页的notebook。Zeppelin提供了数据可视化的框架。
+
+=== 语言、技术支持
+
+* JDBC
+* Spark
+* Shell
+* ……
+
+=== 直接安装
+
+[source,shell]
+.start_zeppelin.sh
+----
+~/backup/zeppelin-0.8.1-bin-all/bin/zeppelin-daemon.sh start >> /dev/null 2>&1 &
+----
