@@ -1,6 +1,5 @@
 # DXL - 数据层
 
-- Data access layer：数据访问
 - Data management layer：数据管理
 - Data processing layer：数据分析处理
 
