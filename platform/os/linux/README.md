@@ -22,6 +22,10 @@ ssh-copy-id remote_user@remote_host
 nohup command >> /dev/null 2>&1 &
 ```
 
+## 文件操作
+
+https://mp.weixin.qq.com/s/MB_DA2bavoxizQ95ZJQKTw
+
 ## Zsh
 
 > 切换`Shell`： chsh -s /bin/zsh

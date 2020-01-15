@@ -31,3 +31,7 @@
 ### <Ctrl Insert>
 
 > 复制已选中的命令行控制台文本
+
+## 链接
+
+- [Pure bash bible](https://github.com/dylanaraps/pure-bash-bible)
