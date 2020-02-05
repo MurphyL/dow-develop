@@ -44,7 +44,7 @@
 
     // Add custom color schemes to this array
     "schemes": [
-		    {
+        {
         }
     ],
 
@@ -91,3 +91,7 @@
 }
 
 ```
+
+### 参考
+
+- [配置文件声明](https://raw.githubusercontent.com/microsoft/terminal/master/doc/cascadia/profiles.schema.json)
