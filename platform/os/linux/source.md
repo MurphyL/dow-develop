@@ -7,4 +7,7 @@
 3. `apt install ca-certificates`；
 4. 现在你可以切换到`https`版本的`apt`配置了。
 
-参考：[Ubuntu Docker Container update-ca-certificates: command not found](https://askubuntu.com/questions/792354/ubuntu-docker-container-update-ca-certificates-command-not-found)
+### 参考
+
+- [Ubuntu Docker Container update-ca-certificates: command not found](https://askubuntu.com/questions/792354/ubuntu-docker-container-update-ca-certificates-command-not-found)
+- [Debian 镜像使用帮助](https://mirrors.tuna.tsinghua.edu.cn/help/debian/)
